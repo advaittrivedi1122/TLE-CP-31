@@ -42,23 +42,6 @@ int solve(vector<int> &v, int n)
 // array elements - n
 int solve(vector<int> &v, int n, int k, bool sorted)
 {
-    int min = 0;
-    int diff = 2*(k - v[n-1]);
-    if (n == 1) {
-        if (v[0] > diff) {
-            return v[0];
-        } else {
-            return diff;
-        }
-    } else {
-        min = v[0] - 0;
-        for (int i = 1; i < n; i++) {
-            if ((v[i] - v[i-1]) > min) {
-                min = v[i] - v[i-1];
-            }
-        }
-        return min > diff ? min : diff;
-    }
 }
 
 // n
